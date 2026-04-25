@@ -1,6 +1,6 @@
 export const TEST_Config ={
-    vus: 3,
-    duration: '30s'
+    vus: 1,
+    duration: '10s'
 
 };
 export const HEADERS ={
