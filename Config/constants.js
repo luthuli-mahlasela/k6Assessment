@@ -5,6 +5,6 @@ export const TEST_Config ={
 };
 export const HEADERS ={
     json: {
-        'Content-Type': 'application/json',
+    'Content-Type': 'application/json',
     },
 };

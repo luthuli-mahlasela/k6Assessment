@@ -1,7 +1,18 @@
-export const PAYLOADS ={
+export const PAYLOADS = {
     login: {
-    "email": "dust.attack@gmail.com",
-   "password": "Testing12345678!",
+        "email": "dust.attack@gmail.com",
+        "password": "Testing12345678!"
    
+    },
+    testimonials: {
+         "title": "string",
+         "content": "string",
+         "rating": 5,
+         "isPublic": true
+    },
+    updatetesimonial: {
+        "title": "string1",
+         "content": "string1",
+         "rating": 1,
     }
 };
