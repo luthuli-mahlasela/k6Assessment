@@ -4,9 +4,9 @@ import { PAYLOADS } from '../data/payloads';
 import { loginRequest } from '../requests/authRequest';
 import { getProfile } from '../requests/profileRequest';
 
-export const options ={
+export const options = {
     vus: TEST_Config.vus,
-    duration: TEST_Config.duration
+    duration: TEST_Config.duration,
 };
 
 export default function(){

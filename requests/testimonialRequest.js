@@ -1,6 +1,7 @@
-import { HEADERS } from "../Config/constants";
-import { URLs } from "../Config/Urls";
 import http from 'k6/http' ;
+import { HEADERS } from '../Config/constants.js';
+import { URLs } from '../Config/Urls.js';
+
 
 export function addTestimonial(token,payload){
     const url = URLs.testimonials;

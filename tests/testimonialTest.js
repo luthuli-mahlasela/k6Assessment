@@ -1,9 +1,9 @@
-import { sleep } from "k6";
-import { TEST_Config } from "../Config/constants";
-import { PAYLOADS } from "../data/payloads";
-import { getProfile } from "../requests/profileRequest";
-import { loginRequest } from "../requests/authRequest";
-import { addTestimonial } from "../requests/testimonialRequest";
+import { sleep } from 'k6';
+import { TEST_Config } from '../Config/constants';
+import { PAYLOADS } from '../data/payloads';
+import { getProfile } from '../requests/profileRequest';
+import { loginRequest } from '../requests/authRequest';
+import { addTestimonial } from '../requests/testimonialRequest';
 
 export const options ={
     vus: TEST_Config.vus,

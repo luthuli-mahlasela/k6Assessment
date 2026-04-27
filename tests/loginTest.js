@@ -1,8 +1,15 @@
 import http from 'k6/http';
-import { PAYLOADS } from '../data/payloads';
-import { loginRequest } from '../requests/authRequest';
-import { TEST_Config } from '../Config/constants';
+import { PAYLOADS } from '../data/payloads.js';
+import { loginRequest } from '../requests/authRequest.js';
+import { TEST_Config } from '../Config/constants.js';
 import { sleep } from 'k6';
+
+// import http from 'k6/http';
+// import { PAYLOADS } from '../data/payloads.js';
+// import { loginRequest } from '../requests/authRequest.js';
+// import { TEST_Config } from '../Config/constants.js';
+// import { sleep } from 'k6';
+ 
 
 export const options={
     vus: TEST_Config.vus,

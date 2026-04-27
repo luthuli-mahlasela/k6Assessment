@@ -1,10 +1,11 @@
-export const TEST_Config ={
+export const TEST_Config = {
     vus: 1,
-    duration: '10s'
+    duration: '3s',
 
 };
-export const HEADERS ={
+
+export const HEADERS = {
     json: {
     'Content-Type': 'application/json',
-    },
+},
 };
