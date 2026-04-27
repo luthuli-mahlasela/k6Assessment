@@ -10,7 +10,7 @@ export const PAYLOADS = {
          "rating": 5,
          "isPublic": true
     },
-    updatetesimonial: {
+    updatetestimonials: {
         "title": "string1",
          "content": "string1",
          "rating": 1,
