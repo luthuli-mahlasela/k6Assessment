@@ -5,8 +5,9 @@ import { URLs } from '../Config/Urls.js';
 
 export function addTestimonial(token,payload){
     const url = URLs.testimonials;
-    const headers = token ? {...HEADERS.json,Authorization:`Bearer ${token}` }:HEADERS.json;
     const body= JSON.stringify(payload);
+    const headers = token ? {...HEADERS.json,Authorization:`Bearer ${token}` }:HEADERS.json;
+    
 
-    return http.post(url,{headers},body);
+    return http.post(url,body,{headers});
 }

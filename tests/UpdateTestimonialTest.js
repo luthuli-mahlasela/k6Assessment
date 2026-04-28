@@ -1,10 +1,10 @@
-import { sleep } from "k6";
-import { TEST_Config } from "../Config/constants";
-import { PAYLOADS } from "../data/payloads";
-import { getProfile } from "../requests/profileRequest";
-import { loginRequest } from "../requests/authRequest";
-import { addTestimonial } from "../requests/testimonialRequest";
-import { updatetesimonialRequest } from "../requests/updateTestRequest";
+import { sleep } from 'k6';
+import { TEST_Config } from '../Config/constants.js';
+import { PAYLOADS } from '../data/payloads.js';
+import { getProfile } from '../requests/profileRequest.js';
+import { loginRequest } from '../requests/authRequest.js';
+import { addTestimonial } from '../requests/testimonialRequest.js';
+import { updatetesimonialRequest } from '../requests/updateTestRequest.js';
 
 export const options ={
     vus: TEST_Config.vus,
@@ -16,8 +16,8 @@ export default function (){
     // const body = UpdtTestPayload.json();
     const testimonialRequestPayload=addTestimonial(PAYLOADS.testimonials);
     const body = testimonialRequestPayload.json();
-    //const token = body.data.token;
+    const token = body.data.token;
     const id = body.data.Id;
-    const response = updatetesimonialRequest(id);
+    const response = updatetesimonialRequest(token,id);
 
 }

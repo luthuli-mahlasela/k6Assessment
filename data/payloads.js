@@ -5,8 +5,8 @@ export const PAYLOADS = {
    
     },
     testimonials: {
-         "title": "string",
-         "content": "string",
+         "title": "title1",
+         "content": "content1",
          "rating": 5,
          "isPublic": true
     },

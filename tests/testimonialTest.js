@@ -1,9 +1,8 @@
 import { sleep } from 'k6';
-import { TEST_Config } from '../Config/constants';
-import { PAYLOADS } from '../data/payloads';
-import { getProfile } from '../requests/profileRequest';
-import { loginRequest } from '../requests/authRequest';
-import { addTestimonial } from '../requests/testimonialRequest';
+import { TEST_Config } from '../Config/constants.js';
+import { PAYLOADS } from '../data/payloads.js';
+import { loginRequest } from '../requests/authRequest.js';
+import { addTestimonial } from '../requests/testimonialRequest.js';
 
 export const options ={
     vus: TEST_Config.vus,
@@ -11,13 +10,14 @@ export const options ={
 };
 
 export default function(){
-    // const loginRequestPayload= loginRequest(PAYLOADS.login);
-    // const body = loginRequestPayload.json();
-    // const token = body.data.token;
-        const testimonialRequestPayload=addTestimonial(PAYLOADS.testimonials);
-        const body = testimonialRequestPayload.json();
-        const token = body.data.token;
-        const response = addTestimonial(token);
-
-
+     const loginRequestPayload= loginRequest(PAYLOADS.login);
+     const body = loginRequestPayload.json();
+     const token = body.data.token;  
+     const response = addTestimonial(token,PAYLOADS.testimonials);
+     
+    console.log(`Response status: ${response}`);
+    console.log(`Response body: ${response.body}`);
 }
+
+
+

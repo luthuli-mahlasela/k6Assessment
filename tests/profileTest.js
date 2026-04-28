@@ -1,8 +1,8 @@
 import {sleep} from 'k6';
-import { TEST_Config } from '../Config/constants';
-import { PAYLOADS } from '../data/payloads';
-import { loginRequest } from '../requests/authRequest';
-import { getProfile } from '../requests/profileRequest';
+import { TEST_Config } from '../Config/constants.js';
+import { PAYLOADS } from '../data/payloads.js';
+import { loginRequest } from '../requests/authRequest.js';
+import { getProfile } from '../requests/profileRequest.js';
 
 export const options = {
     vus: TEST_Config.vus,
