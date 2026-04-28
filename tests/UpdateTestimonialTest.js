@@ -1,7 +1,6 @@
 import { sleep } from 'k6';
 import { TEST_Config } from '../Config/constants.js';
 import { PAYLOADS } from '../data/payloads.js';
-import { getProfile } from '../requests/profileRequest.js';
 import { loginRequest } from '../requests/authRequest.js';
 import { addTestimonial } from '../requests/testimonialRequest.js';
 import { updatetesimonialRequest } from '../requests/updateTestRequest.js';
@@ -17,11 +16,11 @@ export default function (){
     const body = loginRequestPayload.json();
     const token = body.data.token;  
 
-    const createResponse= addTestimonial(PAYLOADS.testimonials,token);
+    const createResponse= addTestimonial(token, PAYLOADS.testimonials);
 
-    const testimonial_Id = createResponse.json().data.Id;
+    const testimonialId = createResponse.json().data.Id;
     
-    const response = updatetesimonialRequest(testimonial_Id,PAYLOADS.updatetestimonials,token);
+    const response = updatetesimonialRequest(token, PAYLOADS.updatetestimonials, testimonialId);
     console.log(`Response status: ${response}`);
     console.log(`Response body: ${response.body}`);
 validateUpdateTestimonialResponse(response);

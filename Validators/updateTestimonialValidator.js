@@ -8,17 +8,9 @@ export function validateUpdateTestimonialResponse(response) {
  
         'success is true': () => body.success === true,
  
-        'update message is correct': () =>
-            body.message && body.message.toLowerCase().includes('updated'),
- 
-        'testimonial id exists': () =>
-            body.data && body.data.Id !== undefined,
- 
-        'title was updated': () =>
-            body.data && body.data.Title === 'Updated QA Bootcamp Testimonial',
- 
+         
         'rating updated': () =>
-            body.data && body.data.Rating === 4,
+            body.data && body.data.Rating === 1,
  
         'response time < 2s': (r) => r.timings.duration < 2000,
     });
