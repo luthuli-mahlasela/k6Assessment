@@ -12,15 +12,15 @@ export const options = {
 };
 
 export default function (){
-    const loginResponse = loginRequest(PAYLOADS.login);     
-    const body = loginResponse.json();
-    const token = body.data.token;
+     const loginRequestPayload= loginRequest(PAYLOADS.login);
+    const body = loginRequestPayload.json();
+    const token = body.data.token; 
 
     const createResponse = addTestimonial(token, PAYLOADS.testimonials);
     const testimonialId = createResponse.json().data.Id;    
 
-    const response = deleteTestimonialRequest(token,testimonialId);
-    
+    const response = deleteTestimonialRequest(token, testimonialId);
+
     console.log(`Response status: ${response.status}`);
     console.log(`Response body: ${response.body}`);         
  // validateUpdateTestimonialResponse(response);
