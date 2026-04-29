@@ -1,7 +1,7 @@
 export const PAYLOADS = {
     login: {
-             "email": "dust.attack@gmail.com",
-            "password": "Testing12345678!"
+             "email": "admin@gmail.com",
+            "password": "@12345678"
    
     },
     testimonials: {

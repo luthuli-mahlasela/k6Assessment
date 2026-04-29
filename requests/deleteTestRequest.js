@@ -6,5 +6,5 @@ export function deleteTestimonialRequest(token,testimonialId){
     const url = `${URLs.testimonials}/${testimonialId}`;
     const headers = token ? {...HEADERS.json,Authorization:`Bearer ${token}` }:HEADERS.json;
 
-    return http.del(url,{headers});
+    return http.del(url,null,{headers});
 }
